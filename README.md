@@ -27,4 +27,4 @@ When the user opens the terminal app, they will be greeted with a brief intro wi
 
 T1A2-4 CONTROL FLOW DIAGRAM
 
-![Image description](ControlFlowDiagram.png)
+![Image description](./docs/ControlFlowDiagram.png)
