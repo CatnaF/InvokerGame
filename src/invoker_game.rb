@@ -1,3 +1,5 @@
+system('clear')
+
 def intro_menu
 
 intro = <<TITLE
@@ -34,10 +36,11 @@ def intro_menu_choice
       elsif user_input == "3"
         play_quiz
       elsif user_input == "info"
-        show_info
+        load "./show_info.rb"
       elsif user_input == "quit"
         puts "Thanks for playing!"
         quit = true
+        exit
       else 
         quit = false
         puts "Please enter a valid input!"

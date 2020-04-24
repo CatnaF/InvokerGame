@@ -1,0 +1,46 @@
+system('clear')
+
+def show_info
+
+info = <<INFO
+
+  ### #     # ####### ####### 
+   #  ##    # #       #     # 
+   #  # #   # #       #     # 
+   #  #  #  # #####   #     # 
+   #  #   # # #       #     # 
+   #  #    ## #       #     # 
+  ### #     # #       ####### 
+
+INFO
+
+    puts info
+    puts
+    puts "Enter '1' for info on HOW TO PLAY"
+    puts "Enter '2' for info ABOUT INVOKER"
+    puts
+    puts "Enter 'back' to return to TITLE/MENU"
+end
+
+def show_info_choice
+    user_input = gets.chomp.downcase
+    back = false
+    while !back
+      if user_input == "1"
+        back = false
+        load "./how_to_play.rb"
+      elsif user_input == "2"
+        about_invoker
+      elsif user_input == "back"
+        back = false
+        load "./invoker_game.rb"
+      else
+        back = false
+        puts "Please enter a valid input!"
+        user_input = gets.chomp.downcase
+    end
+  end
+end
+
+show_info
+show_info_choice
