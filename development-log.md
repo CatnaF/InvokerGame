@@ -13,3 +13,9 @@ Thursday 23 April 2020
 -Added system('clear') for better user interface/experience when transitioning to different sections
 -Fixed being unable to exit game(loop) with 'quit' input when going to info and back to title/menu. included exit (line 44)
 -Finished how_to_play.rb page
+-Finished INFO section, including HOW TO PLAY and ABOUT INVOKER, transitions working as intended.
+
+Saturday 25 April 2020
+-Started development on play ENDLESS game mode
+-Created invoke_list for spells
+-Stuck on figuring logic to randomize + user answer input in ENDLESS mode
