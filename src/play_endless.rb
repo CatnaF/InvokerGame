@@ -14,19 +14,53 @@ invoke_list = {
 }.freeze
 
 def endless_mode(invoke_list)
-    random_spell = invoke_list.keys.sample.any?
+    help = <<SPELLS
+  
+    Invoked Abilities:
+  
+    QQQ = COLD SNAP
+    QQW = GHOST WALK
+    QQE = ICE WALL
+    WWW = EMP
+    WWQ = TORNADO
+    WWE = ALACRITY
+    QWE = DEAFENING BLAST
+    EEE = SUN STRIKE
+    EEQ = FORGE SPIRIT
+    EEW = CHAOS METEOR
+
+    Remember to include R at the end to invoke! (i.e COLD SNAP = QQQR)
+SPELLS
+
+    random_spell = invoke_list.keys.shuffle.first
     quit = false
     while !quit
-    puts random_spell
-    user_input = gets.chomp.downcase
-    if user_input == random_spell
-    endless_mode
+    system('clear')
+    puts "ENDLESS MODE"
+    puts
+    puts "Enter 'help' for Invoke List"
+    puts "Enter 'quit' to return to TITLE/MENU"
+    puts
+    puts "Your spell to cast is:"
+    puts
+    puts random_spell.upcase
+    puts
+    user_input = gets.strip.downcase
+    if invoke_list[random_spell].include?(user_input)
+    endless_mode(invoke_list)
+    elsif user_input == "help"
+    puts help
+    puts
+    puts "Enter any input to retry"
+    user_input = gets.strip.downcase
     elsif user_input == "quit"
     load "./invoker_game.rb"
-    else 
+    else
     quit = false
-    puts "Please enter a valid input!"
-    user_input = gets.chomp.downcase
+    puts
+    puts "Wrong spell or invalid input, try again!"
+    puts "Enter any input to retry"
+    user_input = gets.strip.downcase
     end
   end
 end
