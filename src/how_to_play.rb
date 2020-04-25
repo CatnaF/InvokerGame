@@ -22,13 +22,13 @@ invoke_list = <<SPELLS
   WWQ = TORNADO
   WWE = ALACRITY
   QWE = DEAFENING BLAST
-  EEE = SUNSTRIKE
+  EEE = SUN STRIKE
   EEQ = FORGE SPIRIT
   EEW = CHAOS METEOR
 SPELLS
   puts invoke_list
   puts
-  puts "Enter 'back' to to return to INFO"
+  puts "Enter 'back' to return to INFO"
 end
 
 def return_to_info

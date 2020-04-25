@@ -30,7 +30,7 @@ def intro_menu_choice
     quit = false
     while !quit
       if user_input == "1"
-        play_endless
+        load "./play_endless.rb"
       elsif user_input == "2"
         play_classic
       elsif user_input == "3"

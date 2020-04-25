@@ -27,12 +27,10 @@ def show_info_choice
     back = false
     while !back
       if user_input == "1"
-        back = false
         load "./how_to_play.rb"
       elsif user_input == "2"
-        about_invoker
+        load "./about_invoker.rb"
       elsif user_input == "back"
-        back = false
         load "./invoker_game.rb"
       else
         back = false
