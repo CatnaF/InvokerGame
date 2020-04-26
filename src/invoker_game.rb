@@ -32,9 +32,13 @@ def intro_menu_choice
       if user_input == "1"
         load "./play_endless.rb"
       elsif user_input == "2"
-        play_classic
+        quit = false
+        puts "CLASSIC mode is not available yet!"
+        user_input = gets.chomp.downcase
       elsif user_input == "3"
-        play_quiz
+        quit = false
+        puts "QUIZ mode is not available yet!"
+        user_input = gets.chomp.downcase
       elsif user_input == "info"
         load "./show_info.rb"
       elsif user_input == "quit"
@@ -51,3 +55,9 @@ end
 
 intro_menu
 intro_menu_choice
+
+begin
+  intro_menu_choice
+rescue
+  puts "Looks like you tried to do something that was not intended!"
+end
