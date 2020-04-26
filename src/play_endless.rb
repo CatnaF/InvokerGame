@@ -14,7 +14,19 @@ invoke_list = {
 }.freeze
 
 def endless_mode(invoke_list)
-    help = <<SPELLS
+game_mode_title = <<ENDLESS
+
+####### #     # ######  #       #######  #####   #####  
+#       ##    # #     # #       #       #     # #     # 
+#       # #   # #     # #       #       #       #       
+#####   #  #  # #     # #       #####    #####   #####  
+#       #   # # #     # #       #             #       # 
+#       #    ## #     # #       #       #     # #     # 
+####### #     # ######  ####### #######  #####   #####  
+                                                        
+ENDLESS
+
+help = <<SPELLS
   
     Invoked Abilities:
   
@@ -36,7 +48,7 @@ SPELLS
     quit = false
     while !quit
     system('clear')
-    puts "ENDLESS MODE"
+    puts game_mode_title
     puts
     puts "Enter 'help' for Invoke List"
     puts "Enter 'quit' to return to TITLE/MENU"
