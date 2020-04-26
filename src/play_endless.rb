@@ -78,3 +78,9 @@ SPELLS
 end
 
 endless_mode(invoke_list)
+
+begin
+  endless_mode(invoke_list)
+rescue
+  puts "Looks like you tried to do something that was not intended!"
+end
