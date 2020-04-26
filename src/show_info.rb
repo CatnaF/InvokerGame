@@ -1,5 +1,7 @@
 system('clear')
 
+require "colorize"
+
 def show_info
 
 info = <<INFO
@@ -14,7 +16,7 @@ info = <<INFO
 
 INFO
 
-    puts info
+    puts info.colorize(:white)
     puts
     puts "Enter '1' for info on HOW TO PLAY"
     puts "Enter '2' for info ABOUT INVOKER"
@@ -34,7 +36,7 @@ def show_info_choice
         load "./invoker_game.rb"
       else
         back = false
-        puts "Please enter a valid input!"
+        puts "Please enter a valid input!".colorize(:red)
         user_input = gets.chomp.downcase
     end
   end
@@ -46,5 +48,5 @@ show_info_choice
 begin
   show_info_choice
 rescue
-  puts "Looks like you tried to do something that was not intended!"
+  puts "Looks like you tried to do something that was not intended!".colorize(:red)
 end

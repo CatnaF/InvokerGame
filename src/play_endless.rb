@@ -1,5 +1,7 @@
 system('clear')
 
+require "colorize"
+
 invoke_list = {
   "cold snap" => ["qqqr"],
   "ghost walk" => ["qqwr", "qwqr", "wqqr"],
@@ -14,6 +16,7 @@ invoke_list = {
 }.freeze
 
 def endless_mode(invoke_list)
+
 game_mode_title = <<ENDLESS
 
 ####### #     # ######  #       #######  #####   #####  
@@ -48,7 +51,7 @@ SPELLS
     quit = false
     while !quit
     system('clear')
-    puts game_mode_title
+    puts game_mode_title.colorize(:white)
     puts
     puts "Enter 'help' for Invoke List"
     puts "Enter 'quit' to return to TITLE/MENU"
@@ -70,7 +73,7 @@ SPELLS
     else
     quit = false
     puts
-    puts "Wrong spell or invalid input, try again!"
+    puts "Wrong spell or invalid input, try again!".colorize(:red)
     puts "Enter any input to retry"
     user_input = gets.strip.downcase
     end
@@ -82,5 +85,5 @@ endless_mode(invoke_list)
 begin
   endless_mode(invoke_list)
 rescue
-  puts "Looks like you tried to do something that was not intended!"
+  puts "Looks like you tried to do something that was not intended!".colorize(:red)
 end

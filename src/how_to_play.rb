@@ -1,5 +1,7 @@
 system('clear')
 
+require "colorize"
+
 def how_to_play
   puts "In Invoker Game, you will be tested on your speed and accuracy in conjuring Invoker's spells from DOTA 2. You will be asked to provide the correct combinations of each spell in this game. There are 3 different game modes to choose from - ENDLESS, CLASSIC and QUIZ." 
   puts
@@ -39,7 +41,7 @@ def return_to_info
         load "./show_info.rb"
       else
         back = false
-        puts "Please enter a valid input!"
+        puts "Please enter a valid input!".colorize(:red)
         user_input = gets.chomp.downcase
     end
   end
@@ -51,5 +53,5 @@ return_to_info
 begin
   return_to_info
 rescue
-  puts "Looks like you tried to do something that was not intended!"
+  puts "Looks like you tried to do something that was not intended!".colorize(:red)
 end

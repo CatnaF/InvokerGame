@@ -1,5 +1,7 @@
 system('clear')
 
+require "colorize"
+
 def intro_menu
 
 intro = <<TITLE
@@ -14,7 +16,7 @@ intro = <<TITLE
                                                                                       
 TITLE
 
-    puts intro
+    puts intro.colorize(:white)
     puts
     puts "Enter 'info' for INFO"
     puts
@@ -33,11 +35,11 @@ def intro_menu_choice
         load "./play_endless.rb"
       elsif user_input == "2"
         quit = false
-        puts "CLASSIC mode is not available yet!"
+        puts "CLASSIC mode is not available yet!".colorize(:red)
         user_input = gets.chomp.downcase
       elsif user_input == "3"
         quit = false
-        puts "QUIZ mode is not available yet!"
+        puts "QUIZ mode is not available yet!".colorize(:red)
         user_input = gets.chomp.downcase
       elsif user_input == "info"
         load "./show_info.rb"
@@ -47,7 +49,7 @@ def intro_menu_choice
         exit
       else 
         quit = false
-        puts "Please enter a valid input!"
+        puts "Please enter a valid input!".colorize(:red)
         user_input = gets.chomp.downcase
     end
   end
@@ -59,5 +61,5 @@ intro_menu_choice
 begin
   intro_menu_choice
 rescue
-  puts "Looks like you tried to do something that was not intended!"
+  puts "Looks like you tried to do something that was not intended!".colorize(:red)
 end
