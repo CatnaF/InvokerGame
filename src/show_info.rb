@@ -42,3 +42,9 @@ end
 
 show_info
 show_info_choice
+
+begin
+  show_info_choice
+rescue
+  puts "Looks like you tried to do something that was not intended!"
+end
