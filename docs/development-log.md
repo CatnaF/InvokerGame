@@ -1,3 +1,5 @@
+-Please view in RAW form
+
 Thursday 23 April 2020
 -Implemented multi line string for game title/intro, using ASCII art
 -Implemented main menu list/options
