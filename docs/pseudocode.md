@@ -1,3 +1,5 @@
+Please view in RAW form
+
 Launched program/app will show a greeting/intro (possibly with ascii art gem), user prompted to input a key(any key or enter/return) to lead to a MENU with INFO, and list of game modes:
 PLAY ENDLESS
 PLAY CLASSIC
