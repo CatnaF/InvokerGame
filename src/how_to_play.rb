@@ -49,7 +49,7 @@ how_to_play
 return_to_info
 
 begin
-  endless_mode(invoke_list)
+  return_to_info
 rescue
   puts "Looks like you tried to do something that was not intended!"
 end
