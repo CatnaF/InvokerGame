@@ -15,3 +15,9 @@ ARGV.each do |spells|
   puts
   puts "#{qqq}", "#{qqw}", "#{qqe}", "#{www}", "#{wwq}", "#{wwe}", "#{qwe}", "#{eee}", "#{eeq}", "#{eew}"
 end
+
+begin
+  ARGV.each
+rescue
+  puts "Looks like you tried to do something that was not intended!"
+end
