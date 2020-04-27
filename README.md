@@ -1,3 +1,5 @@
+* Installation guide: https://github.com/CatnaF/InvokerGame/blob/master/docs/help_install.md
+
 * Trello: https://trello.com/b/u4WJOPvU/fxt-terminal-app
 * GitHub: https://github.com/CatnaF/InvokerGame
 
