@@ -1,3 +1,8 @@
+Please view in RAW form
+
+Trello: https://trello.com/b/u4WJOPvU/fxt-terminal-app
+GitHub: https://github.com/CatnaF/InvokerGame
+
 T1A2-1 STATEMENT OF PURPOSE AND SCOPE
 
 The purpose of this terminal app is to practice and improve the invoking of spells for a character named Carl, the Invoker, from DOTA 2. This character is one of the most complex in the game to play and master, as his 10 spells need to be invoked from a combination of 3 reagents - Quas, Wex and Exort, or Q, W, E for short. Once a combination of Q, W, and/or E is applied, we Invoke the reagents with R.
